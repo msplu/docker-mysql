@@ -2,6 +2,7 @@ FROM alpine:latest
 MAINTAINER MsWebmaster
 
 WORKDIR /src
+VOLUME /src
 COPY startup.sh /startup.sh
 RUN chmod 755 /startup.sh
 
