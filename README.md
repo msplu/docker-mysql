@@ -10,4 +10,6 @@ a docker image with mysql
 
 ### MYSQL_PASSWORD
 
-### MYSQL_ROOT_PASSWORD (default 000000)
+### MYSQL_ROOT_PASSWORD
+
+### MYSQL_ALLOW_EMPTY_PASSWORD

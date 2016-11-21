@@ -2,11 +2,17 @@ FROM alpine:latest
 MAINTAINER MsWebmaster
 
 WORKDIR /app
-COPY startup.sh /startup.sh
-RUN chmod 755 /startup.sh
+VOLUME /app
 
-RUN apk add --update mysql mysql-client bash && rm -f /var/cache/apk/*
+COPY ./startup.sh /
+
+RUN chmod +x /startup.sh \
+&& apk --update add mysql mysql-client bash \
+&& rm -rf /var/cache/apk/*
+
 COPY my.cnf /etc/mysql/my.cnf
 
 EXPOSE 3306
-CMD ["/startup.sh"]
+
+ENTRYPOINT [ "/startup.sh" ]
+CMD [ "mysqld", "--user=root" ]
