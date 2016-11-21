@@ -1,15 +1,17 @@
-# docker-mysql
-a docker image with mysql
+docker-mysql
+============
+A docker alpine image with mysql
 
 
-## Environment Variables
+Environment variables
+---------------------
 
-### MYSQL_DATABASE
+#### MYSQL_DATABASE
 
-### MYSQL_USER
+#### MYSQL_USER
 
-### MYSQL_PASSWORD
+#### MYSQL_PASSWORD
 
-### MYSQL_ROOT_PASSWORD
+#### MYSQL_ROOT_PASSWORD
 
-### MYSQL_ALLOW_EMPTY_PASSWORD
+#### MYSQL_ALLOW_EMPTY_PASSWORD
